@@ -1,93 +1,231 @@
-/* Custom Fonts */
-body {
-    background: linear-gradient(to bottom, #00c6ff, #0072ff , white);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    
-    justify-content: center;
-    align-items: center;
-    cursor: url('./drawable/android.cur'), default;
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-#dps-about-me{
-    font-family: Arial, sans-serif;
-    text-align: center;
-    height: 100vh;
-    
-    color: #ffffff;
-    width:100%;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-Regular.ttf');
-  }
-  
-  @font-face {
-    font-family: 'Dancing Script';
-    src: url('DancingScript-Regular.ttf');
-  }
-  
 
-  #about-me {
-    
-    padding: 50px 0;
+/* Apply a CSS reset to normalize the styles across browsers */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a default font size and line height for the entire document */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Set a responsive base font size using a media query */
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 14px;
   }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+}
+
+/* Set a max-width and margin for the page content */
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Set a responsive font size for headings using a media query */
+@media screen and (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 2rem;
   }
-  
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
+}
+
+/* Set a responsive font size for paragraph text using a media query */
+@media screen and (max-width: 400px) {
   p {
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    line-height: 1.5;
+    font-size: 0.8rem;
   }
-  .text-container {
-    text-align: center;
-  }
+}
+
+/* Make images responsive by setting a max-width */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.body{
+  align-content: center;
+  align-items: center;
   
-  h1 {
-    font-size: 50px;
-    font-weight: bold;
-    animation: color-change 10s infinite alternate;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.animated-text {
+  font-size: 4em;
+  text-align: center;
+  animation: slideIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
   }
-  
-  @keyframes color-change {
-    0% {
-      color: #ff0000;
-    }
-    25% {
-      color: #eb9e22;
-    }
-    50% {
-      color: #0000ff;
-    }
-    75% {
-      color: #ffff00;
-    }
-    100% {
-      color: #28f032;
-    }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
- #above-about{
- }
- #pic-profile{
- }
- .space {
-    height: 50px;
-    width: 100%;
-    background-color: #f5f5f5;
+}
+
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-img {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 2rem;
+}
+
+.about-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#about_me_heading{
+  font-family: cursive;
+  background-color: black;
+  opacity: 0.5;
+  color: ghostwhite;
+  background-size: content;
+}
+#about_me_details{
+  font-size: 20dp;
+  font-family: monospace;
+  font-weight: bolder;
+  text-decoration: blink;
+}
+
+#skills {
+  /*background-color: #f7f7f7; 
+  opacity: 0.4;*/
+  padding: 50px;
+}
+
+#skills h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  background-color: black;
+  font-family: cursive;
+  color: ghostwhite;
+}
+
+#skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#skills li {
+  display: inline-block;
+  margin: 20px;
+  max-width: 250px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#skills h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#skills p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+#skills {
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+#skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#skills li {
+  display: inline-block;
+  margin: 20px;
+  max-width: 250px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.skill {
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-name {
+  background-color: #111;
+  color: blanchedalmond;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.skill-bar {
+  background-color: #555;
+  height: 20px;
+  position: relative;
+}
+
+.skill-level {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transition: width 1s;
 }
