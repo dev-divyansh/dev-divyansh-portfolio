@@ -229,3 +229,85 @@ img {
   text-align: center;
   transition: width 1s;
 }
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  font-size: 1em;
+  font-family: sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #719ece;
+  background-color: #fff;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #719ece;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #4f7bbf;
+}
+
+form.sent {
+  transform: translateY(-50px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+form.sent h2 {
+  margin-bottom: 0;
+}
+
+form.sent input[type="text"],
+form.sent input[type="email"],
+form.sent textarea,
+form.sent button[type="submit"] {
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+form.sent p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #719ece;
+  transition: all 0.3s ease-in-out;
+}
